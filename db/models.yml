@@ -1,3 +1,9 @@
+Movies:
+ - title: string 
+ - year: integer 
+
+
+
 # Example table for a typical Book model.
 #
 # Book:
