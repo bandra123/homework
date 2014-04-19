@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-get "saraswati" => "movies/index"
+get "/dice/roll" => "dice/roll"
+get "/books/list" => "books/list"
 end
+
+
