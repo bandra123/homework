@@ -1,0 +1,40 @@
+<% the_id = params["id"] %>
+ 
+<% the_book = Read.read(the_id) %>
+ 
+ 
+ 
+ 
+ 
+<table border="5" style="width:500px">
+<head>
+<tr>
+  <td><big>Title</big></td>
+  <td><%= the_book["title"] %></td>
+</tr>
+ 
+<tr>
+  <td><big>Price</big></td>
+  <td><%= the_book["price"] %></td>
+</tr>
+ 
+<tr>
+  <td><big>Average rating </big></td>
+  <td><%= the_book["average_rating"] %></td>
+ 
+</tr>
+</table>
+</head>
+ 
+<h4><%= the_book["review1"] %></h4>
+<h4><%= the_book["review2"] %></h4>
+<h4><%= the_book["review3"] %></h4>
+<h4><%= the_book["review4"] %></h4>
+<p>                                    
+ 
+ 
+ 
+ 
+</p>
+<li><%=link_to "Return to Main menu", "/books" %> </li>
+ 

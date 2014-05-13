@@ -1,26 +1,25 @@
-<table border="5" style="width:500px">
-<tr>
-  <td><big>Title</big></td>
-  <td><big>Author</big> </td>
-</tr>
-<tr>
-  <td> </td>
-  <td> </td>
-</tr>
-<tr>
-  <td>A Brief History of Time</td>
-  <td>Stephen Hawking</td> 
-</tr>
-<tr>
-  <td>Alice in Wonderland</td>
-  <td>Lewis Carroll</td> 
-</tr>
-<tr>
-  <td>The Lord of the Rings</td>
-  <td>J.R.R Tolkien</td> 
-</tr>
-<tr>
-  <td>The Hobbit</td>
-  <td>J.R.R Tolkien</td> 
-</tr>
-</table>
+Books List
+
+<% all_books = Read.read %>
+
+<h2>Book Titles</h2>
+
+<ol>
+<% all_books.each do |jup| %> 
+<li><strong> <%= link_to jup["title"],"/books/#{jup["id"]}" %></strong> Written by <strong><%=jup.author%></li></strong>
+
+
+
+<%end%>
+<ol>
+
+
+<% chu_tiya= Read.find_by(average_rating: Read.maximum(:average_rating))%>
+The Editor's Pick is <strong><%= link_to chu_tiya['title'],"/books/#{chu_tiya["id"]}" %></strong>
+
+
+
+
+
+
+
